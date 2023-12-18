@@ -36,7 +36,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 sudo apt-get update && sudo apt-get install apache2 -y
 
 # Enable proxy, proxy_http, headers module
-sudo a2enmod proxy && sudo a2enmod proxy_http && sudo a2enmod headers &&sudo systemctl restart apache2
+sudo a2enmod proxy && sudo a2enmod proxy_http && sudo a2enmod headers && sudo systemctl restart apache2
 
 # Edit Apache Configuration file 
 cd /etc/apache2/sites-available/
