@@ -61,3 +61,4 @@ jenkins ALL=(ALL:ALL) NOPASSWD:ALL
 # Now go to Route 53 -> Hosted Zones -> Create hosted zone -> then Domain name and description is :- chinmaykubalprojects.tech -> its a Public hosted zone -> then Click on Create hosted zone. -> then use all the details and use it in the Nameservers in hostinger. (Make sure to backup the default Nameservers provided by hostinger) -> then create record in the aws.
 
 # How to run pipeline:- 
+# In jenkins -> DashBoard -> New Item -> Give Item a name and select "pipeline" -> Give some description to the pipeline -> Then in pipeline section select "Pipeline script from SCM" -> SCM is Git, add repo URL, select branch name -> After that in Script Path select Jenkinsfile. -> save the these settings. -> Then from dashboard select the pipeline with the name that has been given in the previous steps and click on Build Now option from the left pannel.
