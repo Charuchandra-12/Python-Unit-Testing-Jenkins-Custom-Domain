@@ -5,13 +5,13 @@ pipeline {
             steps {
                 
                 // Update package information
-                sh ' apt-get update'
+                sh 'sudo apt-get update'
 
                 // Install Python3 pip
-                sh ' apt-get install -y python3-pip'
+                sh 'sudo apt-get install -y python3-pip'
 
                 // Install request package
-                sh ' pip3 install requests -y'
+                sh 'sudo pip3 install requests -y'
 
             }
         }
