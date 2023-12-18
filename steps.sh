@@ -26,8 +26,10 @@ sudo ufw allow 8080 && sudo ufw status && sudo ufw enable -y
 # get the admin passcode 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-# Configure Jenkins User
+# Configure Jenkins User 
 sudo visudo
+
+# Add the below line in the above file
 jenkins ALL=(ALL:ALL) NOPASSWD:ALL
 
 # Create a custom domain :- jenkins.chinmaykubalprojects.tech
