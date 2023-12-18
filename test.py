@@ -11,7 +11,7 @@ class TestAtgWorldWebsite(unittest.TestCase):
 
     def test_website_loading(self):
         # Setting this variable to True to simulate a failure in connecting to the website
-        simulate_failure = True
+        simulate_failure = False
 
         url = "https://atg.world"
         error_url = "https://atg.worlp"
