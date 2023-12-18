@@ -32,8 +32,7 @@ sudo visudo
 # Add the below line in the above file
 jenkins ALL=(ALL:ALL) NOPASSWD:ALL
 
-# Create a custom domain :- jenkins.chinmaykubalprojects.tech
-# website name:- http://jenkins.chinmaykubalprojects.tech/
+# Create a custom domain :- 
 
 # Reference Link:- https://github.com/yeshwanthlm/installing-jenkins/blob/main/README.md#2-how-to-configure-and-run-jenkins-behind-apache-reverse-proxy
 
@@ -56,8 +55,7 @@ sudo systemctl restart jenkins
 sudo ufw allow ssh
 sudo ufw allow http
 sudo ufw allow https
-sudo ufw enable
-
+sudo ufw enable -y
 
 
 # Now go to Route 53 -> Hosted Zones -> Create hosted zone -> then Domain name and description is :- chinmaykubalprojects.tech -> its a Public hosted zone -> then Click on Create hosted zone. -> then use all the details and use it in the Nameservers in hostinger. (Make sure to backup the default Nameservers provided by hostinger) -> then create record in the aws.
