@@ -8,10 +8,10 @@ pipeline {
                 sh 'sudo apt-get update'
 
                 // Install Python3 pip
-                sh 'sudo apt-get install -y python3-pip'
+                sh 'sudo apt-get install python3-pip'
 
                 // Install request package
-                sh 'sudo pip3 install requests -y'
+                sh 'sudo pip3 install requests'
 
             }
         }
