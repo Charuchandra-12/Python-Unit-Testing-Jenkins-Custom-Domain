@@ -19,7 +19,7 @@ sudo apt update -y && sudo apt install jenkins -y && sudo systemctl status jenki
 
 
 # Modify Firewall to Allow Jenkins
-sudo ufw allow 8080 && sudo ufw status && sudo ufw enable -y
+sudo ufw allow 8080 && sudo ufw enable && sudo ufw status
 
 # Set up Jenkins
 # go to the server ip OR domain name :- http://ip_address_or_domain:8080
@@ -40,7 +40,10 @@ jenkins ALL=(ALL:ALL) NOPASSWD:ALL
 sudo apt-get update && sudo apt-get install apache2 -y
 
 # Enable proxy, proxy_http, headers module
-sudo a2enmod proxy && sudo a2enmod proxy_http && sudo a2enmod headers && sudo systemctl restart apache2
+sudo a2enmod proxy 
+sudo a2enmod proxy_http 
+sudo a2enmod headers 
+sudo systemctl restart apache2
 
 # Edit Apache Configuration file 
 cd /etc/apache2/sites-available/
@@ -55,7 +58,7 @@ sudo systemctl restart jenkins
 sudo ufw allow ssh
 sudo ufw allow http
 sudo ufw allow https
-sudo ufw enable -y
+sudo ufw enable 
 
 
 # Now go to Route 53 -> Hosted Zones -> Create hosted zone -> then Domain name and description is :- chinmaykubalprojects.tech -> its a Public hosted zone -> then Click on Create hosted zone. -> then use all the details and use it in the Nameservers in hostinger. (Make sure to backup the default Nameservers provided by hostinger) -> then create record in the aws.
